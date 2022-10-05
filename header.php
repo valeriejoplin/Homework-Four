@@ -10,7 +10,7 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
           <div class="logo-image">
-            <img src="https://i.pinimg.com/originals/44/ec/f4/44ecf4af02e3b89998b3b2e95da424e6.jpg"  width="50" height = "50" class="img-fluid">
+            <img src="https://i.pinimg.com/originals/44/ec/f4/44ecf4af02e3b89998b3b2e95da424e6.jpg"  width="150" height = "100" class="img-fluid">
       </div>
       </a>
 <nav class="navbar navbar-expand-lg bg-light">
