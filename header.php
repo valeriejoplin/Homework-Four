@@ -29,7 +29,7 @@
         </li>
       </ul>
       <span class="navbar-text">
-        Navbar text with an inline element
+Welcome to your new favorite place.
       </span>
     </div>
   </div>
