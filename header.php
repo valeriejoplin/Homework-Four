@@ -13,10 +13,6 @@
             <img src="https://i.pinimg.com/originals/44/ec/f4/44ecf4af02e3b89998b3b2e95da424e6.jpg"  width="150" height = "100" class="img-fluid">
       </div>
       </a>
-    <a class="navbar-brand" href="#">Welcome</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
