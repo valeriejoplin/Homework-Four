@@ -17,6 +17,7 @@ $servername = "localhost";
 $username = "valeriej_databaseuser";
 $password = "tI_*dXAL^r[(";
 $dbname = "valeriej_homework3";
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
@@ -31,12 +32,9 @@ if ($result->num_rows > 0) {
 ?>
   <tr>
     <td><?=$row["DrinkID"]?></td>
-    <td><?=$row["Name"]?></td>
+    <td><?=$row["ItemName"]?></td>
     <td><?=$row["Price"]?></td>
     <td><?=$row["Description"]?></td>
-
-
-
   </tr>
 <?php
   }
