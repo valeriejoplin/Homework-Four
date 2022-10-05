@@ -13,9 +13,7 @@
             <img src="https://i.pinimg.com/originals/44/ec/f4/44ecf4af02e3b89998b3b2e95da424e6.jpg"  width="150" height = "100" class="img-fluid">
       </div>
       </a>
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar w/ text</a>
+    <a class="navbar-brand" href="#">Welcome</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
