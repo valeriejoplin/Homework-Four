@@ -23,7 +23,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * from DrinkMenu";
+$sql = "SELECT DrinkID, ItemName, Price, Description from DrinkMenu";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
