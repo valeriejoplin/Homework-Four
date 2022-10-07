@@ -9,7 +9,7 @@ require_once("header.php")
       <th>Name</th>
       <th>Price</th>
       <th>Description</th>
-      <th>Default Side</th>
+      <th>Side</th>
     </tr>
   </thead>
   <tbody>
