@@ -24,7 +24,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FoodMenu";
+$sql = "SELECT FoodID, ItemName, Price, Description, DefaultSide from FoodMenu";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
