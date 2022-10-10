@@ -32,7 +32,7 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["LocationId"]?></td>
+    <td><?=$row["LocationID"]?></td>
     <td><?=$row["City"]?></td>
     <td><?=$row["State"]?></td>
     <td><?=$row["Address"]?></td>
