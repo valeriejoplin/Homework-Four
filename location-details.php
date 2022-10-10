@@ -25,7 +25,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
   die("Connection failed: " . $conn->connect_error);
 }
 $lid = $_GET['LocationID'];
-$sql = "SELECT * FROM Locations WHERE LocationID=" . $lid;
+$sql = "SELECT * FROM Location WHERE LocationID=" . $lid;
     $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
