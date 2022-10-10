@@ -32,7 +32,7 @@ require_once ("header.php");
       <td>$6</td>
     </tr>
     <tr>
-      <td>Jacque's Julep</td>
+      <td>Jacques' Julep</td>
       <td>$13</td>
       <td>$6.50</td>
     </tr>
