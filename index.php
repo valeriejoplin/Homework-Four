@@ -39,6 +39,33 @@ require_once ("header.php");
   </tbody>
 </table>
 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Appetizer</th>
+      <th scope="col">Regular Price</th>
+      <th scope="col">Happy Hour Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cirtus Guacamole</td>
+      <td>$9</td>
+      <td>$4.50</td>
+    </tr>
+    <tr>
+    <td>Pretzel Bites</td>
+      <td>$8</td>
+      <td>$4</td>
+    </tr>
+    <tr>
+      <td>Nachos</td>
+      <td>$10</td>
+      <td>$5</td>
+    </tr>
+  </tbody>
+</table>
+<h6> * Additions are not included in the Happy Hour Price </h6>
 <?php
 require_once ("footer.php");
 ?>
