@@ -24,6 +24,9 @@
         <li class="nav-item">
           <a class="nav-link" href="drink.php">Drink Menu</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="employee.php">Employees</a>
+        </li>
        <li class="nav-item">
           <a class="nav-link" href="customers.php">Customers</a>
         </li>
