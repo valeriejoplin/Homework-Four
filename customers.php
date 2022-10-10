@@ -6,7 +6,9 @@ require_once("header.php")
   <thead>
     <tr>
       <th>ID</th>
-      <th>Name</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+
       <th>Favorite Menu Item</th>
       <th>Optional Notes</th>
     </tr>
