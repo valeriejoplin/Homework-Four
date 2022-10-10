@@ -3,16 +3,7 @@ require_once("header.php");
 ?>
 <body>
     <h1>Location Details</h1>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Address</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="card-group">
     <?php
 $servername = "localhost";
 $username = "valeriej_databaseuser";
@@ -31,12 +22,11 @@ $sql = "SELECT * FROM Location WHERE LocationID=" . $lid;
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
-  <tr>
-    <td><?=$row["LocationID"]?></td>
-    <td><?=$row["City"]?></td>
-    <td><?=$row["State"]?></td>
-    <td><?=$row["Address"]?></td>
-  </tr>
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><?=$row["City"]?></h5>
+      <p class="card-text"><?=$row["State"]?><ul>
+      <p class="card-text"><?=$row["Address"]?><ul>
 <?php
   }
 } else {
