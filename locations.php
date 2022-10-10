@@ -30,7 +30,8 @@ if ($result->num_rows > 0) {
 ?>
   <tr>
     <td><?=$row["LocationID"]?></td>
-    <td><?=$row["City"]?></td>
+    <td><a href="location-details.php?id=<?=$row["LocationID"]?>"><?=$row["City"]?></a></td>
+
   </tr>
 <?php
   }
