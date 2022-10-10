@@ -15,7 +15,6 @@ require_once ("header.php");
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col">Drink</th>
       <th scope="col">Regular Price</th>
       <th scope="col">Happy Hour Price</th>
@@ -23,19 +22,16 @@ require_once ("header.php");
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
       <td>Millie's Margarita</td>
       <td>$11</td>
       <td>$5.50</td>
     </tr>
     <tr>
-      <th scope="row">2</th>
       <td>Avi's Aperol Spritz</td>
       <td>$12</td>
       <td>$6</td>
     </tr>
     <tr>
-      <th scope="row">3</th>
       <td>Jacque's Julep</td>
       <td>$13</td>
       <td>$6.50</td>
