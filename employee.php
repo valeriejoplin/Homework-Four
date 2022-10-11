@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
 ?>
   <tr>
     <td><?=$row["EmployeeID"]?></td>
-    <td><?=$row["FirstName"]?></td>
+    <td><a href="employee-cards.php?id=<?=$row["EmployeeID"]?>"><?=$row["FirstName"]?></a></td>
     <td><?=$row["LastName"]?></td>
     <td><?=$row["HireDate"]?></td>
     <td><?=$row["Position"]?></td>
