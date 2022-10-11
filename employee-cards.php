@@ -2,7 +2,7 @@
 require_once("header.php");
 ?>
 <body>
-    <h1>Location Details</h1>
+    <h1>Employee Cards</h1>
 <div class="card-group">
     <?php
 $servername = "localhost";
@@ -16,7 +16,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
   die("Connection failed: " . $conn->connect_error);
 }
 $eid = $_GET['id'];
-$sql = "SELECT * FROM Employee WHERE EmployeeID=" . $eid;
+$sql = "SELECT * FROM Employees WHERE EmployeeID=" . $eid;
     $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
