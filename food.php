@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     case 'Edit':
       $sqlEdit = "update FoodMenu set ItemName=? where =FoodID?";
       $stmtEdit = $conn->prepare($sqlEdit);
-      $stmtEdit->bind_param("si", $_POST['iITem'], $_POST['iid']);
+      $stmtEdit->bind_param("si", $_POST['iItem'], $_POST['iid']);
       $stmtEdit->execute();
       echo '<div class="alert alert-success" role="alert">Item edited.</div>';
     case 'Delete':
