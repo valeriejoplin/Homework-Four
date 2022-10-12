@@ -106,6 +106,7 @@ $conn->close();
 ?>
   </tbody>
     </table>
+<a href="food-add.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Add New Item</a>
 
 <?php
 require_once("footer.php")
