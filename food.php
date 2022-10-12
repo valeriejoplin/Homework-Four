@@ -15,6 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   switch ($_POST['saveType']) {
     case 'Add':
       $sqlAdd = "insert into FoodMenu (ItemName) value (?)";
+      $sqlAdd = "insert into FoodMenu (Price) value (?)";
+
       $stmtAdd = $conn->prepare($sqlAdd);
       $stmtAdd->bind_param("s", $_POST['iItem']);
       $stmtAdd->execute();
