@@ -62,9 +62,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["Description"]?></td>
     <td><?=$row["DefaultSide"]?></td>
       <td> 
-          <button type ="button" class="btn" data-bs-toggle="modal" data-bs-target="#editFood<?-$row["FoodID"]?>">
-              Edit
-          </button>
+          <button type ="button" class="btn" data-bs-toggle="modal" data-bs-target="#editFood<?-$row["FoodID"]?>">Edit</button>
           <div class ="modal fade" id="editFood<?=$row["FoodID"]?>" data-bs-background="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editItem<?=$row["FoodID"]?>Label" aria-hidden="true">
             <div class="modal-dialog">
                <div class="modal-content">
