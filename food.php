@@ -16,14 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     case 'Add':
       $sqlAdd = "insert into FoodMenu (ItemName) value (?)";
       $stmtAdd = $conn->prepare($sqlAdd);
-      $stmtAdd->bind_param("s", $_POST['iItem']);
+      $stmtAdd->bind_param("s", $_POST['iName']);
       $stmtAdd->execute();
       echo '<div class="alert alert-success" role="alert">New item added.</div>';
       break;
     case 'Edit':
       $sqlEdit = "update FoodMenu set ItemName=? where =FoodID?";
       $stmtEdit = $conn->prepare($sqlEdit);
-      $stmtEdit->bind_param("si", $_POST['iItem'], $_POST['iid']);
+      $stmtEdit->bind_param("si", $_POST['iName'], $_POST['iid']);
       $stmtEdit->execute();
       echo '<div class="alert alert-success" role="alert">Item edited.</div>';
     case 'Delete':
@@ -74,7 +74,7 @@ if ($result->num_rows > 0) {
                       <form method="post" action="">
                         <div class="mb-3">      
                        <label for="editItem<?=$row["FoodItem"]?>Name" class="form-label">Name</label> 
-<input type="text" class="form-control" id="editItem<?=$row["FoodID"]?>Name" aria-describedby="editItem<?=$row["FoodID"]?>Help" name="iItem" value="<?=$row['ItemName']?>">
+<input type="text" class="form-control" id="editItem<?=$row["FoodID"]?>Name" aria-describedby="editItem<?=$row["FoodID"]?>Help" name="iName" value="<?=$row['ItemName']?>">
                           <div id="editItem<?=$row["FoodID"]?>Help" class="form-text">Enter the item's name.</div>
                         </div>
                         <input type="hidden" name="iid" value="<?=$row['FoodID']?>">
