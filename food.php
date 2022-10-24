@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </thead>
   <tbody>
   <?php
-$sql = "SELECT FoodID, ItemName, Price, Description, DefaultSide from FoodMenu";
+$sql = "SELECT * from FoodMenu";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -104,7 +104,33 @@ $conn->close();
 ?>
   </tbody>
     </table>
-<a href="food-add.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Add New Item</a>
+     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addItem">
+        Add New
+      </button>
+        <div class="modal fade" id="addItem" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addItemLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="addItemLabel">Add Instructor</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="">
+                <div class="mb-3">
+                  <label for="ItemName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="ItemName" aria-describedby="nameHelp" name="iName">
+                  <div id="nameHelp" class="form-text">Enter the item name.</div>
+                </div>
+                <input type="hidden" name="saveType" value="Add">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+
 
 <?php
 require_once("footer.php")
