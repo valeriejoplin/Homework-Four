@@ -15,13 +15,13 @@ if ($conn->connect_error) {
 }
 $iID = $_POST['iID'];
 $iItem = $_POST['iItem'];
-$iPrice = $_POST['IPrice'];
+$iPrice = $_POST['iPrice'];
 $iDesc = $_POST['iDesc'];
 $iSide = $_POST['iSide'];
 
 $sql = "update FoodMenu set ItemName=?, Price=?,DefaultSide=?,Description=? where FoodID=?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("si", $iItem,$iPrice, $iDesc, $iSide, $_POST['iid']);
+    $stmt->bind_param("si", $iItem,$iPrice, $iDesc, $iSide, $_POST['fid']);
     $stmt->execute();
 ?>
     
