@@ -5,29 +5,27 @@ require_once("header.php");
     
 <?php
 $servername = "localhost";
-$username = "projecto_homework3";
-$password = "0w_zeP}]OVy0";
-$dbname = "projecto_homework3";
+$username = "valeriej_databaseuser";
+$password = "tI_*dXAL^r[(";
+$dbname = "valeriej_homework4";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
+
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "delete from instructor where instructor_id=?";
-//echo $sql;
+$sql = "delete from FoodMenu where FoodID=?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $_POST['iid']);
     $stmt->execute();
 ?>
     
-    <h1>Delete Instructor</h1>
+    <h1>Delete Item</h1>
 <div class="alert alert-success" role="alert">
-  Instructor deleted.
+  Item deleted.
 </div>
-    <a href="instructors.php" class="btn btn-primary">Go back</a>
+    <a href="food.php" class="btn btn-primary">Go back</a>
 
 <?php
 require_once("footer.php");
