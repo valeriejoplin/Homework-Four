@@ -17,9 +17,9 @@ $iPrice = $_POST['iPrice'];
 $iDesc = $_POST['iDesc'];
 $iSide = $_POST['iSide'];
 $iID= $_POST['iID'];
-$sql = "INSERT into FoodMenu (ItemName, Price, Description, DefaultSide, FoodID) value (?,?,?,?,?)";
+$sql = "INSERT into FoodMenu (ItemName, Price, Description, DefaultSide, FoodID) values (?,?,?,?,?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param($iID,$iItem, $iPrice, $iDesc, $iSide);
+    $stmt->bind_param("sis",$iID,$iItem, $iPrice, $iDesc, $iSide);
     $stmt->execute();
 ?>
 <h1>Add Item</h1>
