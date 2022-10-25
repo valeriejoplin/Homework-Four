@@ -16,6 +16,7 @@ $iItem = $_POST['iItem'];
 $iPrice = $_POST['iPrice'];
 $iDesc = $_POST['iDesc'];
 $iSide = $_POST['iSide'];
+$iID= $_POST['iID'];
 $sql = "INSERT into FoodMenu (ItemName, Price, Description, DefaultSide) value (?,?,?,?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s",$iItem, $iPrice, $iDesc, $iSide);
