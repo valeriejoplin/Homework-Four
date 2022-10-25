@@ -13,7 +13,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$iID = $_POST['iID'];
 $iItem = $_POST['iItem'];
 $iPrice = $_POST['iPrice'];
 $iDesc = $_POST['iDesc'];
