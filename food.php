@@ -85,7 +85,7 @@ $conn->close();
   </tbody>
 </table>
 <br>
-<a href="food-add.php" class="btn btn-primary">Add Employees</a>
+<a href="food-add.php" class="btn btn-primary">Add New Item</a>
 </br>
 
 
