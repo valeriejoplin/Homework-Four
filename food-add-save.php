@@ -1,8 +1,6 @@
 <?php
 require_once("header.php");
 ?>
-  <body>
-    
 <?php
 $servername = "localhost";
 $username = "valeriej_databaseuser";
@@ -20,7 +18,7 @@ $iDesc = $_POST['iDesc'];
 $iSide = $_POST['iSide'];
 $sql = "INSERT into FoodMenu (ItemName, Price, Description, DefaultSide) value (?,?,?,?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param($iItem, $iPrice, $iDesc, $iSide);
+    $stmt->bind_param("sis",$iItem, $iPrice, $iDesc, $iSide);
     $stmt->execute();
 ?>
 <h1>Add Item</h1>
