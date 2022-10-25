@@ -17,7 +17,9 @@ require_once("header.php");
     <label for="DefaultSide" class="form-label">Side</label>
     <input type="text" class="form-control" id="DefaultSide" aria-describedby="nameHelp" name="iSide">
     <div id="nameHelp" class="form-text">Enter the side it comes with.</div>
-
+    <label for="FoodID" class="form-label">ID</label>
+    <input type="text" class="form-control" id="FoodID" aria-describedby="nameHelp" name="iID">
+    <div id="nameHelp" class="form-text">Enter the ID.</div>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
