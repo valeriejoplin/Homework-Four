@@ -11,29 +11,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  switch ($_POST['saveType']) {
-    case 'Add':
-      $sqlAdd = "insert into FoodMenu (ItemName, Price, Description, DefaultSide) value (?,?,?,?)";
-      $stmtAdd = $conn->prepare($sqlAdd);
-      $stmtAdd->bind_param("s", $_POST['iName']);
-      $stmtAdd->execute();
-      echo '<div class="alert alert-success" role="alert">New item added.</div>';
-      break;
-    case 'Edit':
-      $sqlEdit = "update FoodMenu set ItemName=? where =FoodID?";
-      $stmtEdit = $conn->prepare($sqlEdit);
-      $stmtEdit->bind_param("si", $_POST['iName'], $_POST['iid']);
-      $stmtEdit->execute();
-      echo '<div class="alert alert-success" role="alert">Item edited.</div>';
-    case 'Delete':
-      $sqlDelete = "delete from FoodMenu where FoodID=?";
-      $stmtDelete = $conn->prepare($sqlDelete);
-      $stmtDelete->bind_param("i", $_POST['iid']);
-      $stmtDelete->execute();
-      echo '<div class="alert alert-success" role="alert">Item deleted.</div>';
-  }
-}
+
 ?>
  <h1> Food Menu </h1>
 <table class="table table-striped">
