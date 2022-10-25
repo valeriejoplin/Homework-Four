@@ -13,11 +13,15 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
+$iID = $_POST['iID'];
 $iItem = $_POST['iItem'];
+$iPrice = $_POST['IPrice'];
+$iDesc = $_POST['iDesc'];
+$iSide = $_POST['iSide'];
 
-$sql = "update FoodMenu set ItemName=? where FoodID=?";
+$sql = "update FoodMenu set ItemName=?, Price=?,DefaultSide=?,Description=? where FoodID=?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("si", $iItem, $_POST['iid']);
+    $stmt->bind_param("si", $iItem,$iPrice, $iDesc, $iSide, $_POST['iid']);
     $stmt->execute();
 ?>
     
