@@ -15,19 +15,20 @@ $conn = new mysqli($servername, $username, $password, $dbname);
   die("Connection failed: " . $conn->connect_error);
 }
 $iItem = $_POST['iItem'];
-
-$sql = "insert into FoodMenu (ItemName) value (?)";
-
+$iPrice = $_POST['iPrice'];
+$iDesc = $_POST['iDesc'];
+$iSide = $_POST['iSide'];
+$sql = "INSERT into FoodMenu (ItemName, Price, Description, DefaultSide) value (?,?,?,?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $iItem);
+    $stmt->bind_param("sis", $iItem, $iPrice, $iDesc, $iSide);
     $stmt->execute();
 ?>
-    <h1>Add New Item</h1>
+<h1>Add Item</h1>
 <div class="alert alert-success" role="alert">
-  New item added.
+  Your menu item has been added!
 </div>
-    <a href="food.php" class="btn btn-primary">Go back</a>
 
+<a href="food.php" class="btn btn-primary">Go back</a>
 <?php
 require_once("footer.php");
 ?>
