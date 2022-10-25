@@ -62,74 +62,31 @@ if ($result->num_rows > 0) {
     <td><?=$row["Description"]?></td>
     <td><?=$row["DefaultSide"]?></td>
       <td> 
-          <button type ="button" class="btn" data-bs-toggle="modal" data-bs-target="#editFood<?-$row["FoodID"]?>">Edit</button>
-          <div class ="modal fade" id="editFood<?=$row["FoodID"]?>" data-bs-background="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editItem<?=$row["FoodID"]?>Label" aria-hidden="true">
-            <div class="modal-dialog">
-               <div class="modal-content">
-                 <div class="modal-header">
-                     <h1 class="modal-title fs-5" id="editItem<?=$row["FoodID"]?>Label">Edit Menu Items</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <form method="post" action="">
-                        <div class="mb-3">      
-                       <label for="editItem<?=$row["FoodItem"]?>Name" class="form-label">Name</label> 
-<input type="text" class="form-control" id="editItem<?=$row["FoodID"]?>Name" aria-describedby="editItem<?=$row["FoodID"]?>Help" name="iName" value="<?=$row['ItemName']?>">
-                          <div id="editItem<?=$row["FoodID"]?>Help" class="form-text">Enter the item's name.</div>
-                        </div>
-                        <input type="hidden" name="iid" value="<?=$row['FoodID']?>">
-                        <input type="hidden" name="saveType" value="Edit">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </td>
-            <td>
-              <form method="post" action="">
-                <input type="hidden" name="iid" value="<?=$row["FoodID"]?>" />
-                <input type="hidden" name="saveType" value="Delete">
-                <button type="submit" class="btn" onclick="return confirm('Are you sure?')">Delete</button>
-              </form>
-            </td>                        
-
-  </tr>
-<?php
-  }
+           <td>
+    <form method="post" action="food-edit.php">
+      <input type="hidden" name="fid" value="<?=$row["FoodID"]?>"/>
+      <input type="submit" value="Edit" class="btn" />
+    </form>
+  </td>
+    <td>
+    <form method="post" action="food-delete-save.php">
+      <input type="hidden" name="fid" value="<?=$row["FoodID"]?>"/>
+      <input type="submit" value="Delete" class="btn btn-primary" onclick="confirm('Are you sure?')" />
+    </form>
+  </td>
+</tr>
+  <?php
+    }
 } else {
   echo "0 results";
 }
 $conn->close();
 ?>
   </tbody>
-    </table>
-     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addItem">
-        Add New
-      </button>
-        <div class="modal fade" id="addItem" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addItemLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="addItemLabel">Add Item</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form method="post" action="">
-                <div class="mb-3">
-                  <label for="ItemName" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="ItemName" aria-describedby="nameHelp" name="iName">
-                  <div id="nameHelp" class="form-text">Enter the item name.</div>
-                </div>
-                <input type="hidden" name="saveType" value="Add">
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-      
+</table>
+<br>
+<a href="food-add.php" class="btn btn-primary">Add Employees</a>
+</br>
 
 
 <?php
