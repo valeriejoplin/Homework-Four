@@ -37,6 +37,19 @@ if ($result->num_rows > 0) {
     <td><?=$row["LastName"]?></td>
     <td><?=$row["FavoriteItem"]?></td>
     <td><?=$row["Notes"]?></td>
+<td> 
+           <td>
+    <form method="post" action="customers-edit.php">
+      <input type="hidden" name="cid" value="<?=$row["CustomerID"]?>"/>
+      <input type="submit" value="Edit" class="btn" />
+    </form>
+  </td>
+    <td>
+    <form method="post" action="customers-delete-save.php">
+      <input type="hidden" name="did" value="<?=$row["CustomerID"]?>"/>
+      <input type="submit" value="Delete" class="btn btn-primary" onclick="confirm('Are you sure?')" />
+    </form>
+  </td>
   </tr>
 <?php
   }
@@ -47,6 +60,9 @@ $conn->close();
 ?>
   </tbody>
     </table>
+ <br>
+<a href="customers-add.php" class="btn btn-primary">Add New Customer</a>
+</br>
 <?php
 require_once("footer.php")
 ?>
