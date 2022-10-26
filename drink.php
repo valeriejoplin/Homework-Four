@@ -35,6 +35,19 @@ if ($result->num_rows > 0) {
     <td><?=$row["ItemName"]?></td>
     <td><?=$row["Price"]?></td>
     <td><?=$row["Description"]?></td>
+   <td> 
+           <td>
+    <form method="post" action="drink-edit.php">
+      <input type="hidden" name="did" value="<?=$row["DrinkID"]?>"/>
+      <input type="submit" value="Edit" class="btn" />
+    </form>
+  </td>
+    <td>
+    <form method="post" action="drink-delete-save.php">
+      <input type="hidden" name="did" value="<?=$row["Drink"]?>"/>
+      <input type="submit" value="Delete" class="btn btn-primary" onclick="confirm('Are you sure?')" />
+    </form>
+  </td>
   </tr>
 <?php
   }
@@ -45,6 +58,9 @@ $conn->close();
 ?>
   </tbody>
     </table>
+<br>
+<a href="drink-add.php" class="btn btn-primary">Add New Item</a>
+</br>
 <?php
 require_once("footer.php")
 ?>
