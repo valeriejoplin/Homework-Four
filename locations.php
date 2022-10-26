@@ -97,7 +97,7 @@ if ($result->num_rows > 0) {
               </form>
             </td>
          </tr>
-<?php}
+<?php
 } else {
   echo "0 results";
 }
