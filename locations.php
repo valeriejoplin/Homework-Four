@@ -96,10 +96,10 @@ if ($result->num_rows > 0) {
                 <input type="submit" class="btn" onclick="return confirm('Are you sure?')" value="Delete">
               </form>
             </td>
-  </tr>
+         </tr>
 <?php
   }
-} else {
+else {
   echo "0 results";
 }
 $conn->close();
@@ -111,7 +111,6 @@ $conn->close();
         Add New
       </button>
 
-      <!-- Modal -->
       <div class="modal fade" id="addLocation" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addLocationLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
