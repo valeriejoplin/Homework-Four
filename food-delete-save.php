@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 
 $sql = "delete from FoodMenu where FoodID=?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $_POST['iid']);
+    $stmt->bind_param("i", $_POST['fid']);
     $stmt->execute();
 ?>
     
