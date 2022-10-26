@@ -98,8 +98,7 @@ if ($result->num_rows > 0) {
             </td>
          </tr>
 <?php
-}
-}
+} 
  }else {
   echo "0 results";
 }
