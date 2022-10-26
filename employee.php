@@ -37,6 +37,12 @@ if ($result->num_rows > 0) {
     <td><?=$row["LastName"]?></td>
     <td><?=$row["HireDate"]?></td>
     <td><?=$row["Position"]?></td>
+    <td>
+    <form method="post" action="employee-delete-save.php">
+      <input type="hidden" name="did" value="<?=$row["EmployeeID"]?>"/>
+      <input type="submit" value="Delete" class="btn btn-primary" onclick="confirm('Are you sure you want to fire them?')" />
+    </form>
+  </td>
   </tr>
 <?php
   }
