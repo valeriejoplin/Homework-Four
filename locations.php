@@ -98,7 +98,7 @@ if ($result->num_rows > 0) {
             </td>
   </tr>
 <?php
-  
+  }
 } else {
   echo "0 results";
 }
@@ -107,7 +107,6 @@ $conn->close();
   </tbody>
     </table>
 <br />
-      <!-- Button trigger modal -->
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addLocation">
         Add New
       </button>
