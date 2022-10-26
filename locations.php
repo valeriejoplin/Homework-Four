@@ -98,7 +98,9 @@ if ($result->num_rows > 0) {
             </td>
          </tr>
 <?php
- else {
+}
+}
+ }else {
   echo "0 results";
 }
 $conn->close();
