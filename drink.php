@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
   </td>
     <td>
     <form method="post" action="drink-delete-save.php">
-      <input type="hidden" name="did" value="<?=$row["Drink"]?>"/>
+      <input type="hidden" name="did" value="<?=$row["DrinkID"]?>"/>
       <input type="submit" value="Delete" class="btn btn-primary" onclick="confirm('Are you sure?')" />
     </form>
   </td>
