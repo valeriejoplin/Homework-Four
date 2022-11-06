@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
 
   while($row = $result->fetch_assoc()) {
 ?>
-<form method="post" action="custoers-edit-save.php">
+<form method="post" action="customers-edit-save.php">
   <div class="mb-3">
     <label for="FirstName" class="form-label">First Name</label>
     <input type="text" class="form-control" id="FirstName" aria-describedby="nameHelp" name="cFirst">
