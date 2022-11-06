@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
     <td>
       <td>
     <form method="post" action="employee-edit.php">
-      <input type="hidden" name="cid" value="<?=$row["EmployeeID"]?>"/>
+      <input type="hidden" name="eID" value="<?=$row["EmployeeID"]?>"/>
       <input type="submit" value="Edit" class="btn" />
     </form>
     <form method="post" action="employee-delete-save.php">
