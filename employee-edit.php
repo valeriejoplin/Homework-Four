@@ -2,7 +2,7 @@
 require_once("header.php");
 ?>
 <body>
- <h1>Edit Customers</h1>
+ <h1>Edit Employees</h1>
 <?php
 $servername = "localhost";
 $username = "valeriej_databaseuser";
@@ -16,9 +16,9 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * from Customers where CustomerID=?";
+$sql = "SELECT * from Employees where EmployeeID=?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $_POST['cID']);
+$stmt->bind_param("i", $_POST['eID']);
 $stmt->execute();
 $result = $stmt->get_result();
 
@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
 
   while($row = $result->fetch_assoc()) {
 ?>
-<form method="post" action="customers-edit-save.php">
+<form method="post" action="employee-edit-save.php">
  <div class="mb-3">
     <label for="FirstName" class="form-label">First Name</label>
     <input type="text" class="form-control" id="FirstName" aria-describedby="nameHelp" name="eFirst">
