@@ -16,7 +16,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * from Customers where DrinkID=?";
+$sql = "SELECT * from Customers where CustomerID=?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $_POST['cID']);
 $stmt->execute();
