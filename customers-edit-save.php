@@ -33,5 +33,5 @@ $sql = "update Customers set FirstName=?, LastName=?,FavoriteItem=?,Notes=? wher
 </div>
     <a href="customers.php" class="btn btn-primary">Go back</a>
    <?php
-require_once("header.php");
+require_once("footer.php");
 ?>
