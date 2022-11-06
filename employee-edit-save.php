@@ -13,7 +13,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$eID = $_POST['eID'];
 $eFirst = $_POST['eFirst'];
 $eLast = $_POST['eLast'];
 $eHireDate= $_POST['eHireDate'];
@@ -23,7 +22,7 @@ $ePosition= $_POST['ePosition'];
 
 $sql = "update Employees set FirstName=?, LastName=?,HireDate=?,Position=? where EmployeeID=?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("si", $eID,$eFirst, $eLast, $eHireDate, $ePosition, $_POST['eID']);
+    $stmt->bind_param("si", $eID,$eFirst, $eLast, $eHireDate, $ePosition, $_POST['eid']);
     $stmt->execute();
 ?>
     
