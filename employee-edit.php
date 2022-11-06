@@ -41,7 +41,7 @@ if ($result->num_rows > 0) {
     <input type="text" class="form-control" id="Position" aria-describedby="nameHelp" name="ePosition">
     <div id="nameHelp" class="form-text">Enter their job title(s).</div>
     <label for="EmployeeID" class="form-label">ID</label>
-    <input type="text" class="form-control" id="CustomerID" aria-describedby="nameHelp" name="eID"> 
+    <input type="text" class="form-control" id="Employee" aria-describedby="nameHelp" name="eID"> 
     <div id="nameHelp" class="form-text">Enter their ID number.</div>
   </div>
   <input type="hidden" name="eID" value="<?=$row['EmployeeID']?>">
