@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
     <div id="nameHelp" class="form-text">Enter their first name</div>
       <label for="LastName" class="form-label">Last Name</label>
     <input type="text" class="form-control" id="LastName" aria-describedby="nameHelp" name="eLast" value="<?=$row['LastName']?>">
-    <div id="nameHelp" class="form-text">Enter the Manager's name</div>
+    <div id="nameHelp" class="form-text">Enter their name</div>
          <label for="HireDate" class="form-label">Hire Date</label>
     <input type="text" class="form-control" id="HireDate" aria-describedby="nameHelp" name="eHireDate" value="<?=$row['HireDate']?>">
     <div id="nameHelp" class="form-text">Enter their date of hire</div>
