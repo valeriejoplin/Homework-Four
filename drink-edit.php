@@ -48,6 +48,8 @@ if ($result->num_rows > 0) {
   <option value="O">Soda</option>
   <option value="P">Pop</option>
   <option value="C">Coke</option>  
+    <?php } ?>
+
   </select>
       <label for="Price" class="form-label">Adjust Price</label>
     <input type="text" class="form-control" id="Price" aria-describedby="nameHelp" name="dPrice" value="<?=$row['Price']?>">
