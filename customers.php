@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <table class="table table-striped">
           
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCustomer">
-        Add New Employee
+        Add New Customer
       </button>
 
       <!-- Modal -->
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="addEmployeeLabel">Add Customer</h1>
+              <h1 class="modal-title fs-5" id="addCustomerLabel">Add Customer</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                           <input type="text" class="form-control" id="editCustomer<?=$row["CustomerID"]?>Name" aria-describedby="editCustomer<?=$row["CustomerID"]?>Help" name="cFirstName">
                           <label for="editCustomer<?=$row["CustomerID"]?>Name" class="form-label">Last Name</label>
                           <input type="text" class="form-control" id="editCustomer<?=$row["CustomerID"]?>Name" aria-describedby="editCustomer<?=$row["CustomerID"]?>Help" name="cLastName">
-                          <div id="editCustomer<?=$row["CustomerID"]?>Help" class="form-text">Enter the employees's name.</div>
+                          <div id="editCustomer<?=$row["CustomerID"]?>Help" class="form-text">Enter the customer's name.</div>
                <label for="editCustomer<?=$row["CustomerID"]?>" class="form-label">Hire Date</label>
                           <input type="text" class="form-control" id="editCustomer<?=$row["CustomerID"]?>Name" aria-describedby="editCustomer<?=$row["CustomerID"]?>Help" name="cFavorite">
                   <label for="editCustomer<?=$row["CustomerID"]?>" class="form-label">Position</label>
