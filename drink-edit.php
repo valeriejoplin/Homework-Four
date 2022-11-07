@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
       } else {
         $selText = "";
       }
-?>
+
   <option value="O">Soda</option>
   <option value="P">Pop</option>
   <option value="C">Coke</option>  
@@ -61,6 +61,7 @@ if ($result->num_rows > 0) {
   <input type="hidden" name="did" value="<?=$row['DrinkID']?>">
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+?>
 <?php
   }
  
