@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
    $itemResult = $conn->query($itemSQL);
    while($itemRow=$itemResult->fetch_assoc()){
     ?>
-   <option value ="<?itemRow["DrinkID"]?>"><?$itemRow["DrinkID"]." - "?><?=$itemRow["ItemName"]?></option>
+   <option value ="<?=$itemRow["DrinkID"]?>"><?=$itemRow["DrinkID"]." - "?><?=$itemRow["ItemName"]?></option>
  <?php
     }
    ?>
