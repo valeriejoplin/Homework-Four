@@ -44,6 +44,8 @@ if ($result->num_rows > 0) {
       <input type="hidden" name="eid" value="<?=$row["EmployeeID"]?>"/>
       <input type="submit" value="Edit" class="btn" />
     </form>
+    </td>
+    <td>
     <form method="post" action="employee-delete-save.php">
       <input type="hidden" name="eid" value="<?=$row["EmployeeID"]?>"/>
       <input type="submit" value="Fire" class="btn btn-primary" onclick="confirm('Are you sure you want to fire them?')" />
