@@ -45,9 +45,7 @@ if ($result->num_rows > 0) {
         $selText = "";
       }
 ?>
-  <option value="O">Soda</option>
-  <option value="P">Pop</option>
-  <option value="C">Coke</option>  
+  <option value="<?=$itemRow['DrinkID']?>"<?=$selText?>><?=$itemRow['ItemName']?></option>
     <?php } ?>
 
   </select>
