@@ -46,6 +46,8 @@ if ($result->num_rows > 0) {
       }
 ?>
   <option value="<?=$itemRow['DrinkID']?>"<?=$selText?>><?=$itemRow['DrinkID']?></option>
+  <?php } ?>
+  </select>
       <label for="Price" class="form-label">Adjust Price</label>
     <input type="text" class="form-control" id="Price" aria-describedby="nameHelp" name="dPrice" value="<?=$row['Price']?>">
     <div id="nameHelp" class="form-text">Enter the Manager's name</div>
