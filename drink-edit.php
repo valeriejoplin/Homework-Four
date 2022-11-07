@@ -44,13 +44,15 @@ if ($result->num_rows > 0) {
       } else {
         $selText = "";
       }
-
+?>
   <option value="O">Soda</option>
   <option value="P">Pop</option>
   <option value="C">Coke</option>  
     <?php } ?>
 
   </select>
+  </div>
+    <div class="mb-3">
       <label for="Price" class="form-label">Adjust Price</label>
     <input type="text" class="form-control" id="Price" aria-describedby="nameHelp" name="dPrice" value="<?=$row['Price']?>">
     <div id="nameHelp" class="form-text">Enter the Manager's name</div>
@@ -61,7 +63,6 @@ if ($result->num_rows > 0) {
   <input type="hidden" name="did" value="<?=$row['DrinkID']?>">
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-?>
 <?php
   }
  
