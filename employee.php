@@ -1,6 +1,17 @@
 <?php
 require_once("header.php");
 ?>
+    <?php
+$servername = "localhost";
+$username = "valeriej_databaseuser";
+$password = "tI_*dXAL^r[(";
+$dbname = "valeriej_homework4";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+?>
 <body>
 <table class="table table-striped">
   <thead>
@@ -13,17 +24,7 @@ require_once("header.php");
     </tr>
   </thead>
   <tbody>
-    <?php
-$servername = "localhost";
-$username = "valeriej_databaseuser";
-$password = "tI_*dXAL^r[(";
-$dbname = "valeriej_homework4";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
+<>php
 $sql = "SELECT * from Employees";
 $result = $conn->query($sql);
 
@@ -40,11 +41,11 @@ if ($result->num_rows > 0) {
     <td>
       <td>
     <form method="post" action="employee-edit.php">
-      <input type="hidden" name="eID" value="<?=$row["EmployeeID"]?>"/>
+      <input type="hidden" name="eid" value="<?=$row["EmployeeID"]?>"/>
       <input type="submit" value="Edit" class="btn" />
     </form>
     <form method="post" action="employee-delete-save.php">
-      <input type="hidden" name="eID" value="<?=$row["EmployeeID"]?>"/>
+      <input type="hidden" name="eid" value="<?=$row["EmployeeID"]?>"/>
       <input type="submit" value="Fire" class="btn btn-primary" onclick="confirm('Are you sure you want to fire them?')" />
     </form>
   </td>
@@ -59,7 +60,7 @@ $conn->close();
   </tbody>
     </table>
      <br>
-<a href="employee-add.php" class="btn btn-primary">Add New Customer</a>
+<a href="employee-add.php" class="btn btn-primary">Add New Employee</a>
 </br>
 <?php
 require_once("footer.php");
