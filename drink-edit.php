@@ -35,7 +35,6 @@ if ($result->num_rows > 0) {
   <div class="mb-3">
     <label for="ItemList" class="form-label">Item Name</label>
 <select class="form-select" aria-label="Select ItemName" id="ItemList" name="did">
- <option value="test">Test</option>
  <?php
    $itemSQL = "Select * From DrinkMenu Order by DrinkID";
    $itemResult = $conn->query($itemSQL);
