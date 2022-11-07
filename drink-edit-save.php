@@ -20,7 +20,7 @@ $dDesc = $_POST['dDesc'];
 
 $sql = "update FoodMenu set ItemName=?, Price=?,Description=? where FoodID=?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("si", $iItem,$iPrice, $iDesc, $_POST['did']);
+    $stmt->bind_param("sssi", $dItem,$dPrice, $dDesc, $_POST['did']);
     $stmt->execute();
 ?>
     
