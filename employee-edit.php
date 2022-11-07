@@ -41,6 +41,7 @@ if ($result->num_rows > 0) {
     <input type="text" class="form-control" id="Position" aria-describedby="nameHelp" name="ePosition" value="<?=$row['Position']?>">
     <div id="nameHelp" class="form-text">Enter their job title(s).</div>
   </div>
+    <input type="hidden" name="eid" value="<?=$row['EmployeeId']?>">
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <?php
