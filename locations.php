@@ -59,7 +59,7 @@ $conn->close();
   </tbody>
     </table>
  <br>
-<a href="location-add.php" class="btn btn-primary">Add New Customer</a>
+<a href="location-add.php" class="btn btn-primary">Add New Location</a>
 </br>
 <?php
 require_once("footer.php")
