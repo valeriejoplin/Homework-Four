@@ -37,11 +37,7 @@ if ($result->num_rows > 0) {
     <label for="Address" class="form-label">Address</label>
     <input type="text" class="form-control" id="Address" aria-describedby="nameHelp" name="lAdd"> value="<?=$row['Address']?>">
     <div id="nameHelp" class="form-text">Enter the address.</div>
-    <label for="LocationID" class="form-label">ID</label>
-    <input type="text" class="form-control" id="LocationID" aria-describedby="nameHelp" name="lID"> value="<?=$row['LocationID']?>">
-    <div id="nameHelp" class="form-text">Enter the location ID.</div>
   </div>
-  <input type="hidden" name="lID" value="<?=$row['Location']?>">
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <?php
