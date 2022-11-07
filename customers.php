@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       echo '<div class="alert alert-success" role="alert">New Customer added.</div>';
       break;
     case 'Edit':
-      $sqlEdit = "update Customers set FirstName=?, LastName=?, HireDate=?,Position=? where CustomerID=?";
+      $sqlEdit = "update Customers set FirstName=?, LastName=?, FavoriteItem=?,Notes=? where CustomerID=?";
       $stmtEdit = $conn->prepare($sqlEdit);
       $stmtEdit->bind_param("ssi", $_POST['cFirstName'], $_POST['cLastName'], $_POST['cFavorite'], $_POST['cNotes']);
       $stmtEdit->execute();
@@ -60,9 +60,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                           <label for="editCustomer<?=$row["CustomerID"]?>Name" class="form-label">Last Name</label>
                           <input type="text" class="form-control" id="editCustomer<?=$row["CustomerID"]?>Name" aria-describedby="editCustomer<?=$row["CustomerID"]?>Help" name="cLastName">
                           <div id="editCustomer<?=$row["CustomerID"]?>Help" class="form-text">Enter the customer's name.</div>
-               <label for="editCustomer<?=$row["CustomerID"]?>" class="form-label">Hire Date</label>
+               <label for="editCustomer<?=$row["CustomerID"]?>" class="form-label">Favorite Item</label>
                           <input type="text" class="form-control" id="editCustomer<?=$row["CustomerID"]?>Name" aria-describedby="editCustomer<?=$row["CustomerID"]?>Help" name="cFavorite">
-                  <label for="editCustomer<?=$row["CustomerID"]?>" class="form-label">Position</label>
+                  <label for="editCustomer<?=$row["CustomerID"]?>" class="form-label">Notes</label>
                           <input type="text" class="form-control" id="editCustomer<?=$row["CustomerID"]?>Name" aria-describedby="editCustomer<?=$row["CustomerID"]?>Help" name="cNotes">
                         </div>
                 <input type="hidden" name="saveType" value="Add">
@@ -118,10 +118,10 @@ if ($result->num_rows > 0) {
                           <label for="editCustomer<?=$row["CustomerID"]?>Name" class="form-label">Last Name</label>
                           <input type="text" class="form-control" id="editCustomer<?=$row["CustomerID"]?>Name" aria-describedby="editCustomer<?=$row["CustomerID"]?>Help" name="cLastName" value="<?=$row['LastName']?>">
                           <div id="editCustomer<?=$row["CustomerID"]?>Help" class="form-text">Enter the employee's name.</div>
-                           <label for="editCustomer<?=$row["CustomerID"]?>" class="form-label">Hire Date</label>
+                           <label for="editCustomer<?=$row["CustomerID"]?>" class="form-label">Favorite Item</label>
                           <input type="text" class="form-control" id="editCustomer<?=$row["CustomerID"]?>Name" aria-describedby="editCustomer<?=$row["CustomerID"]?>Help" name="cFavorite" value="<?=$row['FavoriteItem']?>">
                           <div id="editCustomer<?=$row["CustomerID"]?>Help" class="form-text">Enter the employee's date of hire.</div>
-                          <label for="editCustomer<?=$row["CustomerID"]?>Name" class="form-label">Position</label>
+                          <label for="editCustomer<?=$row["CustomerID"]?>Name" class="form-label">Notes</label>
                           <input type="text" class="form-control" id="editCustomer<?=$row["CustomerID"]?>Name" aria-describedby="editCustomer<?=$row["CustomerID"]?>Help" name="cNotes" value="<?=$row['Notes']?>">
                           <div id="editCustomer<?=$row["CustomerID"]?>Help" class="form-text">Enter the employee's position.</div>
                         </div>
