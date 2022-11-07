@@ -24,7 +24,7 @@ if ($conn->connect_error) {
     </tr>
   </thead>
   <tbody>
-<>php
+<?php
 $sql = "SELECT * from Employees";
 $result = $conn->query($sql);
 
