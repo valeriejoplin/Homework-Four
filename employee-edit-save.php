@@ -19,10 +19,9 @@ $eHireDate= $_POST['eHireDate'];
 $ePosition= $_POST['ePosition'];
 
 
-
 $sql = "update Employees set FirstName=?, LastName=?,HireDate=?,Position=? where EmployeeID=?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("si", $eID,$eFirst, $eLast, $eHireDate, $ePosition, $_POST['eid']);
+    $stmt->bind_param("si",$eFirst, $eLast, $eHireDate, $ePosition, $_POST['eid']);
     $stmt->execute();
 ?>
     
