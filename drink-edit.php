@@ -28,11 +28,6 @@ if ($result->num_rows > 0) {
 ?>
 <form method="post" action="drink-edit-save.php">
   <div class="mb-3">
-    <label for="ItemName" class="form-label">New Name</label>
-    <input type="text" class="form-control" id="ItemName" aria-describedby="nameHelp" name="dItem" value="<?=$row['ItemName']?>">
-    <div id="nameHelp" class="form-text">Enter the item's name</div>
-      </div>
-  <div class="mb-3">
     <label for="ItemList" class="form-label">Item Name</label>
 <select class="form-select" aria-label="Select ItemName" id="ItemList" name="did">
  <?php
