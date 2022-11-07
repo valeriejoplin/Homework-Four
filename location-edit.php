@@ -29,16 +29,16 @@ if ($result->num_rows > 0) {
 <form method="post" action="location-edit-save.php">
   <div class="mb-3">
  <label for="City" class="form-label">City</label>
-    <input type="text" class="form-control" id="City" aria-describedby="nameHelp" name="lCity">
+    <input type="text" class="form-control" id="City" aria-describedby="nameHelp" name="lCity"> value="<?=$row['City']?>">
     <div id="nameHelp" class="form-text">Enter the city name.</div>
     <label for="State" class="form-label">State</label>
-    <input type="text" class="form-control" id="LastName" aria-describedby="nameHelp" name="lState"> 
+    <input type="text" class="form-control" id="LastName" aria-describedby="nameHelp" name="lState"> value="<?=$row['State']?>">
     <div id="nameHelp" class="form-text">Enter the state name.</div>
     <label for="Address" class="form-label">Address</label>
-    <input type="text" class="form-control" id="Address" aria-describedby="nameHelp" name="lAdd">
+    <input type="text" class="form-control" id="Address" aria-describedby="nameHelp" name="lAdd"> value="<?=$row['Address']?>">
     <div id="nameHelp" class="form-text">Enter the address.</div>
     <label for="LocationID" class="form-label">ID</label>
-    <input type="text" class="form-control" id="LocationID" aria-describedby="nameHelp" name="lID"> 
+    <input type="text" class="form-control" id="LocationID" aria-describedby="nameHelp" name="lID"> value="<?=$row['LocationID']?>">
     <div id="nameHelp" class="form-text">Enter the location ID.</div>
   </div>
   <input type="hidden" name="lID" value="<?=$row['Location']?>">
