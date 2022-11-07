@@ -67,3 +67,4 @@ $conn->close();
 <?php
 require_once("footer.php");
 ?>
+}
