@@ -31,6 +31,21 @@ if ($result->num_rows > 0) {
     <label for="ItemName" class="form-label">New Name</label>
     <input type="text" class="form-control" id="ItemName" aria-describedby="nameHelp" name="dItem" value="<?=$row['ItemName']?>">
     <div id="nameHelp" class="form-text">Enter the item's name</div>
+      </div>
+  <div class="mb-3">
+    <label for="ItemList" class="form-label">Item Name</label>
+<select class="form-select" aria-label="Select ItemName" id="ItemList" name="did">
+<?php
+    $itemSql = "select * from DrinkMenu order by FoodID";
+    $itemResult = $conn->query($itemSql);
+    while($itemRow = $itemResult->fetch_assoc()) {
+      if ($itemRow['DrinkID'] == $row['DrinkID']) {
+        $selText = " selected";
+      } else {
+        $selText = "";
+      }
+?>
+  <option value="<?=$itemRow['DrinkID']?>"<?=$selText?>><?=$itemRow['DrinkID']?></option>
       <label for="Price" class="form-label">Adjust Price</label>
     <input type="text" class="form-control" id="Price" aria-describedby="nameHelp" name="dPrice" value="<?=$row['Price']?>">
     <div id="nameHelp" class="form-text">Enter the Manager's name</div>
