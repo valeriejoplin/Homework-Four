@@ -94,7 +94,7 @@ if ($result->num_rows > 0) {
 ?>
           
           <tr>
-            <td><?=$row["InstructorID"]?></td>
+            <td><?=$row["EmployeeID"]?></td>
             <td><?=$row["LastName"]." "?><?=$row["FirstName"]?></a></td>
               <td><?=$row["HireDate"]?></td>
             <td><?=$row["Position"]?></td>
