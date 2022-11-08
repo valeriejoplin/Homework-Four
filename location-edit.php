@@ -38,6 +38,7 @@ if ($result->num_rows > 0) {
     <input type="text" class="form-control" id="Address" aria-describedby="nameHelp" name="lAdd"> value="<?=$row['Address']?>">
     <div id="nameHelp" class="form-text">Enter the address.</div>
   </div>
+    <input type="hidden" name="lID" value="<?=$row['LocationID']?>">
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <?php
