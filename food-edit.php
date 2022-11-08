@@ -27,10 +27,21 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
 <form method="post" action="food-edit-save.php">
+   <div class="mb-3">
+    <label for="ItemList" class="form-label">Item Name</label>
+<select class="form-select" aria-label="Select ItemName" id="ItemList" name="did">
+ <?php
+   $itemSQL = "Select * From FoodMenu Order by FoodID";
+   $itemResult = $conn->query($itemSQL);
+   while($itemRow=$itemResult->fetch_assoc()){
+    ?>
+   <option value ="<?=$itemRow["FoodID"]?>"><?=$itemRow["FoodID"]." - "?><?=$itemRow["ItemName"]?></option>
+ <?php
+    }
+   ?>
+  </select>
+  </div>
   <div class="mb-3">
-    <label for="ItemName" class="form-label">New Name</label>
-    <input type="text" class="form-control" id="ItemName" aria-describedby="nameHelp" name="iItem" value="<?=$row['ItemName']?>">
-    <div id="nameHelp" class="form-text">Enter the item's name</div>
       <label for="Price" class="form-label">Adjust Price</label>
     <input type="text" class="form-control" id="Price" aria-describedby="nameHelp" name="iPrice" value="<?=$row['Price']?>">
     <div id="nameHelp" class="form-text">Enter the Manager's name</div>
