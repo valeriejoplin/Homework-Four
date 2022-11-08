@@ -38,13 +38,13 @@ if ($result->num_rows > 0) {
 <td> 
            <td>
     <form method="post" action="location-edit.php">
-      <input type="hidden" name="cid" value="<?=$row["LocationID"]?>"/>
+      <input type="hidden" name="lID" value="<?=$row["LocationID"]?>"/>
       <input type="submit" value="Edit" class="btn" />
     </form>
   </td>
     <td>
     <form method="post" action="location-delete-save.php">
-      <input type="hidden" name="did" value="<?=$row["LocationID"]?>"/>
+      <input type="hidden" name="lID" value="<?=$row["LocationID"]?>"/>
       <input type="submit" value="Delete" class="btn btn-primary" onclick="confirm('Are you sure?')" />
     </form>
   </td>
